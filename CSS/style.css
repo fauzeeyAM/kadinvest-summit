@@ -332,7 +332,7 @@ nav a:hover{
         rgba(6,20,35,0.55),
         rgba(6,20,35,0.85)
     ),
-    url("../images/Kaduna.png") center/cover no-repeat;
+    url("/images/Kaduna.png") center/cover no-repeat;
 
     display:flex;
     align-items:center;
