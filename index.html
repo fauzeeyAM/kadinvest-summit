@@ -1,5 +1,5 @@
 <?php
-$eventDate = "October 21 - 23, 2026";
+$eventDate = "May 14 - 18, 2026";
 ?>
 
 <!DOCTYPE html>
@@ -14,13 +14,49 @@ $eventDate = "October 21 - 23, 2026";
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <header class="navbar">
+<div class="modal-overlay" id="welcomeModal">
+    <div class="modal-box">
+
+        <button class="modal-close" onclick="closeModal()">✕</button>
+
+        <h2>Register to Attend</h2>
+
+        <p>
+            Register as a visitor to access exhibitions, sessions, networking opportunities,
+            and live experiences at Kaduna Investment Summit 2026.
+        </p>
+
+        <a href="#" class="modal-btn">Register Now</a>
+
+    </div>
+</div>
+
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<header class="navbar">
         <div class="logo">
     <img src="images/logo.png" alt="KADINVEST Logo">
     <span class="logo-text"><span class="g">KAD</span><span class="i">INVEST</span></span>
+</div>
+
+
+<label for="menu-toggle" class="hamburger">
+    ☰
+</label>
+
+<div class="mobile-nav">
+    
+    <label for="menu-toggle" class="close-btn">✕</label>
+
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Focus Sectors</a>
+    <a href="#">Agenda</a>
+    <a href="#">Register</a>
 </div>
    
 </div>
@@ -35,7 +71,15 @@ $eventDate = "October 21 - 23, 2026";
         </nav>
 
         <a href="#" class="nav-btn">Register Now</a>
-    </header>
+</header>
+    <section class="pre-hero">
+    <div class="pre-hero-overlay"></div>
+
+    <div class="pre-hero-content">
+        <h2>Shaping the Future of Investment in Kaduna</h2>
+        <p>Government • Investors • Development Partners • Industry Leaders</p>
+    </div>
+</section>
 
     <section class="hero">
         <div class="overlay"></div>
@@ -60,26 +104,156 @@ $eventDate = "October 21 - 23, 2026";
                 <a href="#" class="secondary-btn">Become a Partner</a>
             </div>
 
-            <div class="event-info">
-                <div class="info-card">
-                    <span>Date</span>
-                    <h3><?php echo $eventDate; ?></h3>
-                </div>
+            <div class="hero-meta">
 
-                <div class="info-card">
-                    <span>Location</span>
-                    <h3>Kaduna State, Nigeria</h3>
-                </div>
+    <div class="meta-item">
+        <span class="meta-line"></span>
+        <div>
+        <small>Date</small>
+        <h4><?php echo $eventDate; ?></h4>
+    </div>
+    </div>
 
-                <div class="info-card">
-                    <span>Theme</span>
-                    <h3>Driving Inclusive Growth Through Economic Integration</h3>
-                </div>
-            </div>
+    <div class="meta-item">
+        <span class="meta-line"></span>
+        <div>
+            <small>Location</small>
+            <h4>Kaduna State, Nigeria</h4>
+        </div>
+    </div>
+
+    <div class="meta-item">
+        <span class="meta-line"></span>
+        <div>
+            <small>Theme</small>
+            <h4>Driving Inclusive Growth Through Economic Integration</h4>
+        </div>
+    </div>
+
+</div>
         </div>
     </section>
 
-    <section class="stats-section">
+<section class="panelists-section">
+
+    <div class="section-header">
+        <span>MEET THE PANELISTS</span>
+        <h2>Industry Leaders, Investors & Policy Experts</h2>
+    </div>
+
+    <div class="panelists-slider">
+
+    <div class="panelists-grid">
+
+    <div class="panelist-card">
+        <img src="images/panelist1.png" alt="Panelist">
+
+        <div class="quote-box">
+            <i class="fa-solid fa-quote-left"></i>
+
+            <p>
+                Investment thrives where innovation,
+                policy and partnerships align.
+            </p>
+
+            <h4>Dr. Amina Yusuf</h4>
+            <span>Investment Strategist</span>
+        </div>
+    </div>
+
+
+    <div class="panelist-card">
+        <img src="images/panelist2.png" alt="Panelist">
+
+        <div class="quote-box">
+            <i class="fa-solid fa-quote-left"></i>
+
+            <p>
+                Sustainable growth comes from
+                long-term infrastructure planning.
+            </p>
+
+            <h4>Mr. John Okoro</h4>
+            <span>Private Equity Advisor</span>
+        </div>
+    </div>
+
+
+    <div class="panelist-card">
+        <img src="images/panelist3.png" alt="Panelist">
+
+        <div class="quote-box">
+            <i class="fa-solid fa-quote-left"></i>
+
+            <p>
+                Technology and policy must work
+                together for inclusive development.
+            </p>
+
+            <h4>Engr. Bello Sani</h4>
+            <span>Infrastructure Development Lead</span>
+        </div>
+    </div>
+
+
+    <div class="panelist-card">
+        <img src="images/panelist4.png" alt="Panelist">
+
+        <div class="quote-box">
+            <i class="fa-solid fa-quote-left"></i>
+
+            <p>
+                Industrialization creates jobs,
+                strengthens trade and drives prosperity.
+            </p>
+
+            <h4>Mrs. Zainab Ahmed</h4>
+            <span>Economic Policy Expert</span>
+        </div>
+    </div>
+
+
+    <div class="panelist-card">
+        <img src="images/panelist5.png" alt="Panelist">
+
+        <div class="quote-box">
+            <i class="fa-solid fa-quote-left"></i>
+
+            <p>
+                Strong investment ecosystems attract
+                global confidence and partnerships.
+            </p>
+
+            <h4>Dr. Musa Ibrahim</h4>
+            <span>Development Finance Specialist</span>
+        </div>
+    </div>
+
+
+    <div class="panelist-card">
+        <img src="images/panelist6.png" alt="Panelist">
+
+        <div class="quote-box">
+            <i class="fa-solid fa-quote-left"></i>
+
+            <p>
+                Energy access remains the backbone
+                of industrial transformation.
+            </p>
+
+            <h4>Ms. Sarah Thompson</h4>
+            <span>Energy & Infrastructure Consultant</span>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<section class="stats-section">
+
+    <div class="stats-wrapper">
+
         <div class="stat-card">
             <h2>2000+</h2>
             <p>Delegates Expected</p>
@@ -99,7 +273,10 @@ $eventDate = "October 21 - 23, 2026";
             <h2>40+</h2>
             <p>Partner Organizations</p>
         </div>
-    </section>
+
+    </div>
+
+</section>
 
     <section class="about-section">
         <div class="section-header">
@@ -141,53 +318,54 @@ $eventDate = "October 21 - 23, 2026";
         </div>
 
         <div class="sector-grid">
-            <div class="sector-card">Agriculture</div>
-            <div class="sector-card">Manufacturing</div>
-            <div class="sector-card">Technology</div>
-            <div class="sector-card">Infrastructure</div>
-            <div class="sector-card">Mining</div>
-            <div class="sector-card">Energy</div>
-        </div>
+
+    <div class="sector-card">
+        <i class="fa-solid fa-wheat-awn"></i>
+        <h3>Agriculture</h3>
+    </div>
+
+    <div class="sector-card">
+        <i class="fa-solid fa-industry"></i>
+        <h3>Manufacturing</h3>
+    </div>
+
+    <div class="sector-card">
+        <i class="fa-solid fa-microchip"></i>
+        <h3>Technology</h3>
+    </div>
+
+    <div class="sector-card">
+        <i class="fa-solid fa-road"></i>
+        <h3>Infrastructure</h3>
+    </div>
+
+    <div class="sector-card">
+        <i class="fa-solid fa-mountain"></i>
+        <h3>Mining</h3>
+    </div>
+
+    <div class="sector-card">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Energy</h3>
+    </div>
     </section>
 
-    <section class="panelists-section">
 
+
+
+<section class="partners-section">
     <div class="section-header">
-        <span>MEET THE PANELISTS</span>
-        <h2>Industry Leaders, Investors & Policy Experts</h2>
+        <span>OUR PARTNERS</span>
+        <h2>Institutions Driving This Summit Forward</h2>
     </div>
 
-    <div class="panelists-grid">
-
-        <div class="panelist-card">
-            <img src="images/panelist1.png" alt="Panelist">
-
-            <div class="panelist-info">
-                <h3>Dr. Amina Yusuf</h3>
-                <p>Investment Strategist</p>
-            </div>
-        </div>
-
-        <div class="panelist-card">
-            <img src="images/panelist1.png" alt="Panelist">
-
-            <div class="panelist-info">
-                <h3>Mr. John Okoro</h3>
-                <p>Private Equity Advisor</p>
-            </div>
-        </div>
-
-        <div class="panelist-card">
-            <img src="images/panelist1.png" alt="Panelist">
-
-            <div class="panelist-info">
-                <h3>Engr. Bello Sani</h3>
-                <p>Infrastructure Development Lead</p>
-            </div>
-        </div>
-
+    <div class="partners-grid">
+        <img src="images/partner1.png" alt="Partner">
+        <img src="images/partner2.png" alt="Partner">
+        <img src="images/partner3.png" alt="Partner">
+        <img src="images/partner4.png" alt="Partner">
+        <img src="images/partner5.png" alt="Partner">
     </div>
-
 </section>
 
     <section class="cta-section">
@@ -203,5 +381,44 @@ $eventDate = "October 21 - 23, 2026";
         </div>
     </section>
 
+    <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h3>KADINVEST</h3>
+            <p>Driving investment, innovation, and sustainable growth in Kaduna State.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="#">About</a>
+            <a href="#">Sectors</a>
+            <a href="#">Agenda</a>
+            <a href="#">Register</a>
+        </div>
+
+        <div class="footer-links">
+            <h4>Contact</h4>
+            <a href="#">info@kadinvest.ng</a>
+            <a href="#">Kaduna, Nigeria</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 KADINVEST Summit. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>
+
+<script>
+window.addEventListener("load", function () {
+    document.getElementById("welcomeModal").classList.add("show");
+});
+
+function closeModal() {
+    document.getElementById("welcomeModal").classList.remove("show");
+}
+</script>
