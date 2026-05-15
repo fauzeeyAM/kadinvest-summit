@@ -7,15 +7,16 @@ $eventDate = "May 14 - 18, 2026";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KADINVEST Summit 2026</title>
+    <title>KADUNA ECONOMIC AND INVESTMENT SUMMIT Summit 2026</title>
 
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css?v=<?= time(); ?>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
 
@@ -28,50 +29,67 @@ $eventDate = "May 14 - 18, 2026";
 
         <p>
             Register as a visitor to access exhibitions, sessions, networking opportunities,
-            and live experiences at Kaduna Investment Summit 2026.
+            and live experiences at Kaduna Economic Investment Summit 2026.
         </p>
 
-        <a href="#" class="modal-btn">Register Now</a>
+                <a href="#"
+        class="primary-btn open-register-modal">
+        Register Now
+        </a>
 
     </div>
 </div>
 
 <input type="checkbox" id="menu-toggle" class="menu-toggle">
 <header class="navbar">
-        <div class="logo">
-    <img src="images/logo.png" alt="KADINVEST Logo">
-    <span class="logo-text"><span class="g">KAD</span><span class="i">INVEST</span></span>
-</div>
 
+    <div class="logo">
 
-<label for="menu-toggle" class="hamburger">
-    ☰
-</label>
+        <img src="images/logo.png" alt="KES Logo">
 
-<div class="mobile-nav">
-    
-    <label for="menu-toggle" class="close-btn">✕</label>
-
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Focus Sectors</a>
-    <a href="#">Agenda</a>
-    <a href="#">Register</a>
-</div>
-   
-</div>
+        <div class="logo-text">
+            <span class="g">KADUNA ECONOMIC &</span>
+            <span class="i">INVESTMENT SUMMIT</span>
         </div>
 
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Focus Sectors</a>
-            <a href="#">Agenda</a>
-            <a href="#">Register</a>
-        </nav>
+    </div>
 
-        <a href="#" class="nav-btn">Register Now</a>
+    <label for="menu-toggle" class="hamburger">
+        ☰
+    </label>
+
+    <div class="mobile-nav">
+
+        <label for="menu-toggle" class="close-btn">✕</label>
+
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#sector">Focus Sectors</a>
+        <a href="#panelists">Speakers</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#" class="mobile-register-btn open-register-modal">
+            Register Now
+        </a>
+
+
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#sector">Focus Sectors</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <a href="#"
+       class="primary-btn open-register-modal">
+       Register Now
+    </a>
+
 </header>
+
     <section class="pre-hero" style="background-image: url('images/Kaduna.png');">
     <div class="pre-hero-overlay"></div>
 
@@ -81,7 +99,7 @@ $eventDate = "May 14 - 18, 2026";
     </div>
 </section>
 
-    <section class="hero">
+<section class="hero">
         <div class="overlay"></div>
 
         <div class="hero-content">
@@ -100,8 +118,14 @@ $eventDate = "May 14 - 18, 2026";
             </p>
 
             <div class="hero-buttons">
-                <a href="#" class="primary-btn">Register as Delegate</a>
-                <a href="#" class="secondary-btn">Become a Partner</a>
+               <a href="#"
+                class="primary-btn open-register-modal">
+                Register as Delegate
+                </a>
+                <a href="#"
+                class="secondary-btn open-partner-modal">
+                Become a Partner
+                </a>
             </div>
 
             <div class="hero-meta">
@@ -134,7 +158,9 @@ $eventDate = "May 14 - 18, 2026";
         </div>
     </section>
 
-<section class="panelists-section">
+
+
+<section class="panelists-section" id="panelists">
 
     <div class="section-header">
         <span>MEET THE PANELISTS</span>
@@ -255,22 +281,22 @@ $eventDate = "May 14 - 18, 2026";
     <div class="stats-wrapper">
 
         <div class="stat-card">
-            <h2>2000+</h2>
+           <h2 class="counter" data-target="2000">0</h2>
             <p>Delegates Expected</p>
         </div>
 
         <div class="stat-card">
-            <h2>25+</h2>
+            <h2 class="counter" data-target="25">0</h2>
             <p>Investment Sessions</p>
         </div>
 
         <div class="stat-card">
-            <h2>15+</h2>
+            <h2 class="counter" data-target="15">0</h2>
             <p>Strategic Sectors</p>
         </div>
 
         <div class="stat-card">
-            <h2>40+</h2>
+            <h2 class="counter" data-target="40">0</h2>
             <p>Partner Organizations</p>
         </div>
 
@@ -278,7 +304,7 @@ $eventDate = "May 14 - 18, 2026";
 
 </section>
 
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="section-header">
             <span>ABOUT THE SUMMIT</span>
             <h2>A Strategic Platform for Economic Transformation</h2>
@@ -289,7 +315,7 @@ $eventDate = "May 14 - 18, 2026";
                 <h3>Investment Promotion</h3>
                 <p>
                     Showcase strategic investment opportunities across
-                    Kaduna Stateâs priority sectors.
+                    Kaduna State's priority sectors.
                 </p>
             </div>
 
@@ -311,7 +337,7 @@ $eventDate = "May 14 - 18, 2026";
         </div>
     </section>
 
-    <section class="sector-section">
+    <section class="sector-section" id="sector">
         <div class="section-header">
             <span>FOCUS SECTORS</span>
             <h2>Priority Investment Opportunities</h2>
@@ -350,10 +376,126 @@ $eventDate = "May 14 - 18, 2026";
     </div>
     </section>
 
+<section class="agenda-section" id="agenda">
+
+    <div class="section-header">
+        <span>SUMMIT AGENDA</span>
+        <h2>Five Days of Investment, Partnerships & Economic Dialogue</h2>
+    </div>
+
+    <div class="agenda-wrapper">
+
+        <!-- DAY 1 -->
+        <div class="agenda-item left reveal">
+
+            <div class="agenda-day green">
+                <h3>Day 1</h3>
+                <span>Sunday, 14 June</span>
+            </div>
+
+            <div class="agenda-content">
+                <h4>Arrival of Participants</h4>
+
+                <p>
+                    Delegates, investors, government officials,
+                    development partners and exhibitors arrive
+                    in Kaduna for registration, networking and
+                    pre-summit engagements.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- DAY 2 -->
+        <div class="agenda-item right reveal">
+
+            <div class="agenda-content">
+                <h4>Pre-Summit Activities</h4>
+
+                <p>
+                    Sectoral exhibitions, strategic Business-to-Business
+                    (B2B) meetings and Government-to-Business (G2B)
+                    investment sessions focused on partnerships,
+                    opportunities and deal-making.
+                </p>
+            </div>
+
+            <div class="agenda-day orange">
+                <h3>Day 2</h3>
+                <span>Monday, 15 June</span>
+            </div>
+
+        </div>
+
+        <!-- DAY 3 -->
+        <div class="agenda-item left reveal">
+
+            <div class="agenda-day blue">
+                <h3>Day 3</h3>
+                <span>Tuesday, 16 June</span>
+            </div>
+
+            <div class="agenda-content">
+                <h4>Official Opening & Gala Night</h4>
+
+                <p>
+                    Official summit opening ceremony, keynote
+                    speeches, high-level investment sessions,
+                    policy dialogues and an evening gala
+                    celebrating partnerships and innovation.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- DAY 4 -->
+        <div class="agenda-item right reveal">
+
+            <div class="agenda-content">
+                <h4>Technical Sessions & Closing Ceremony</h4>
+
+                <p>
+                    Deep-dive technical discussions across
+                    strategic sectors followed by summit
+                    resolutions, investment announcements
+                    and closing ceremony activities.
+                </p>
+            </div>
+
+            <div class="agenda-day green">
+                <h3>Day 4</h3>
+                <span>Wednesday, 17 June</span>
+            </div>
+
+        </div>
+
+        <!-- DAY 5 -->
+        <div class="agenda-item left reveal">
+
+            <div class="agenda-day orange">
+                <h3>Day 5</h3>
+                <span>Thursday, 18 June</span>
+            </div>
+
+            <div class="agenda-content">
+                <h4>Departure of Participants</h4>
+
+                <p>
+                    Departure of delegates, investors,
+                    exhibitors and strategic partners
+                    following the conclusion of summit
+                    activities.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-
-<section class="partners-section">
+<section class="partners-section" id="partners">
     <div class="section-header">
         <span>OUR PARTNERS</span>
         <h2>Institutions Driving This Summit Forward</h2>
@@ -377,16 +519,115 @@ $eventDate = "May 14 - 18, 2026";
                 Investment Summit 2026.
             </p>
 
-            <a href="#" class="primary-btn">Complete Registration</a>
+            <a href="#"
+            class="primary-btn open-register-modal">
+            Complete Registration
+            </a>
         </div>
     </section>
 
-    <footer class="footer">
+
+<section class="contact-section" id="contact">
+
+    <div class="section-header">
+        <span>CONTACT US</span>
+        <h2>Get In Touch With The Summit Secretariat</h2>
+    </div>
+
+    <div class="contact-wrapper">
+
+        <!-- LEFT -->
+        <div class="contact-info">
+
+            <div class="contact-card">
+                <i class="fa-solid fa-envelope"></i>
+
+                <div>
+                    <h4>Email</h4>
+                    <p>info@kadunainvestmentsummit.com</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-phone"></i>
+
+                <div>
+                    <h4>Phone</h4>
+                    <p>+234 XXX XXX XXXX</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+                    <h4>Location</h4>
+                    <p>Kaduna State, Nigeria</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <form class="contact-form" id="contactForm">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="contactName">
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="contactEmail">
+            </div>
+
+            <div class="form-group full-width">
+                <label>Message</label>
+               
+            <textarea rows="6" id="contactMessage"></textarea>
+            </div>
+
+            <button type="button"
+                    class="primary-btn"
+                    id="sendMessageBtn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<footer class="footer">
     <div class="footer-container">
 
         <div class="footer-brand">
-            <h3>KADINVEST</h3>
+            <h3>KADUNA ECONOMIC AND INVESTMENT SUMMIT</h3>
             <p>Driving investment, innovation, and sustainable growth in Kaduna State.</p>
+                 <div class="footer-socials">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
         </div>
 
         <div class="footer-links">
@@ -399,26 +640,205 @@ $eventDate = "May 14 - 18, 2026";
 
         <div class="footer-links">
             <h4>Contact</h4>
-            <a href="#">info@kadinvest.ng</a>
+            <a href="#">info@kadunainvestmentsummit.com</a>
             <a href="#">Kaduna, Nigeria</a>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 KADINVEST Summit. All rights reserved.</p>
+        <p>© 2026 KADUNA ECONOMIC AND INVESTMENT SUMMIT. All rights reserved.</p>
     </div>
 </footer>
+
+
+
+<!-- REGISTRATION MODAL -->
+<div class="custom-modal" id="mainModal">
+
+    <div class="custom-modal-content">
+
+        <button class="custom-close-btn" id="closeModalBtn">
+            ✕
+        </button>
+
+        <div class="custom-modal-header">
+            <h2 id="modalTitle">Register as Delegate</h2>
+
+            <p>
+                Register to participate in the Kaduna Economic &
+                Investment Summit 2026.
+            </p>
+        </div>
+
+        <form id="registrationForm">
+
+            <div class="custom-grid">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" id="phone">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email">
+                </div>
+
+                 <div class="form-group">
+                    <label>Country</label>
+                     <select id="country"></select>
+                </div>
+               
+                <div class="form-group">
+                    <label>Attendance Type</label>
+                    <select id="attendanceType"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>Organization Type</label>
+                    <select id="organizationType"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>Company / MDA</label>
+                    <input type="text" id="organizationName">
+                </div>
+
+                <div class="form-group">
+                    <label>Position</label>
+                    <input type="text" id="position">
+                </div>
+
+                <div class="form-group">
+                    <label>Sector</label>
+                    <select id="delegatesector"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>Interests</label>
+                    <select id="interests" multiple></select>
+                </div>
+               
+
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" class="secondary-btn" id="closeModalBtn2">
+                    Close
+                </button>
+
+                <button type="button"
+                        class="primary-btn"
+                        id="saveRegistrationBtn">
+                    Save Registration
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- PARTNER MODAL -->
+<div class="custom-modal" id="partnerModal">
+
+    <div class="custom-modal-content">
+
+        <button class="custom-close-btn" id="closePartnerModalBtn">
+            ✕
+        </button>
+
+        <div class="custom-modal-header">
+            <h2>Become a Partner</h2>
+
+            <p>
+                Partner with the Kaduna Economic &
+                Investment Summit 2026.
+            </p>
+        </div>
+
+        <form id="partnerForm">
+
+            <div class="custom-grid">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="partnerFullName">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="partnerEmail">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" id="partnerPhone">
+                </div>
+
+                <div class="form-group">
+                    <label>Organization Name</label>
+                    <input type="text" id="partnerOrganizationName">
+                </div>
+
+                <div class="form-group">
+                    <label>Organization Type</label>
+                    <select id="partnerOrganizationType"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>Partnership Interest</label>
+                    <select id="partnershipInterest"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>Sponsorship Level</label>
+                    <select id="sponsorshipLevel"></select>
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="partnerMessage"></textarea>
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+
+                <button type="button"
+                        class="secondary-btn"
+                        id="closePartnerModalBtn2">
+                    Close
+                </button>
+
+                <button type="button"
+                        class="primary-btn"
+                        id="savePartnerBtn">
+                    Submit Partnership
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="JS/register.js"></script>
+<script src="JS/contact.js"></script>
+
+
+
 
 </body>
 </html>
 
-<script>
-window.addEventListener("load", function () {
-    document.getElementById("welcomeModal").classList.add("show");
-});
-
-function closeModal() {
-    document.getElementById("welcomeModal").classList.remove("show");
-}
-</script>
